@@ -1,14 +1,23 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>Home</title>
+    <title>e-Products</title>
+    <!-- Include Bootstrap CSS -->
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        /* Optional: Add custom styles here */
+    </style>
 </head>
 <body>
-    <h1>Categories</h1>
-    <ul>
-        {% for category in categories %}
-            <li><a href="{% url 'category_detail' category.id %}">{{ category.name }}</a></li>
-        {% endfor %}
-    </ul>
+    <div class="container">
+        <h1 class="mt-5 mb-4">Categories</h1>
+        <ul class="list-group">
+            {% for category in categories %}
+                <li class="list-group-item">
+                    <a href="{% url 'category_detail' category.id %}" class="text-decoration-none">{{ category.name }}</a>
+                </li>
+            {% endfor %}
+        </ul>
+    </div>
 </body>
 </html>
