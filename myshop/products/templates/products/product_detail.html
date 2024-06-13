@@ -2,10 +2,19 @@
 <html>
 <head>
     <title>{{ product.name }}</title>
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
 </head>
 <body>
-    <h1>{{ product.name }}</h1>
-    <p>{{ product.description }}</p>
-    <p>View Count: {{ product.view_count }}</p>
+    <div class="container mt-5">
+        <div class="row">
+            <div class="col-md-12">
+                <h1 class="mb-4">{{ product.name }}</h1>
+                <p class="lead">{{ product.description }}</p>
+                <p class="text-muted">View Count: {{ product.view_count }}</p>
+            </div>
+        </div>
+    </div>
+    
 </body>
 </html>
+
